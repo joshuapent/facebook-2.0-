@@ -27,6 +27,7 @@ Stretch Features:
 - Make search feature more user-friendly.
 
 User experience: 
+
   Our number one goal with the user experience is to ensure that every feature added/included is seamless and functioning. Quality over quantity is our focus for this project. Ideally, we would like to create a webpage very similar to facebook, with much if not most of the functionality of the mega-site, while also adding our own personal flair to its bland design and features. 
 
 
