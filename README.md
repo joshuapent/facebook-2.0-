@@ -25,6 +25,12 @@ Stretch Features:
 - Share feature.
 - Bcrpyt/GoogleAuth to encode passwords for security. 
 - Make search feature more user-friendly.
+- Allow the ability to message others.
+
+Major Stretch Features: 
+
+- DM widget.
+- Ability to respond with emoji's.
 
 User experience: 
 
