@@ -9,7 +9,7 @@ require('dotenv').config();
 const loginController = require('./controllers/login.js')
 const userController = require('./controllers/user.js')
 const feedController = require('./controllers/feed.js')
-
+const settingsController = require('./controllers/settings.js')
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -35,6 +35,8 @@ app.use('/', loginController);
 app.use('/home', userController);
 
 app.use('/feed', feedController);
+
+app.use('/settings', settingsController)
 
 app.get('/*', (req, res) => {
     res.send('<h1>Page not found</h1>')
