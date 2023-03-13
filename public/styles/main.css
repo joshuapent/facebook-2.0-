@@ -28,6 +28,36 @@ body{
     justify-content: space-evenly;
     gap:5px;
 }
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color:rgba(43, 105, 177, 0.408);
+}
+.nav-left{
+margin: 0 5em;
+}
+.nav-right{
+    margin: 0 4em;
+}
+
+.nav-right a{
+    text-decoration: none;
+    color: black;
+    margin:1em;
+    font-size: 2em;
+}
+
+.nav-right a:hover{
+    text-decoration: underline;
+}
+
+
+
+nav img{
+    height:4em;
+}
 
 footer{
     text-align: center;
