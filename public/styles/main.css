@@ -38,10 +38,10 @@ nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
-    background-color: #03254EF3;
-    /* background-image: radial-gradient(#393E41, #03254E); */
-    /* background-color: #393E41; */
+    height: 9vh;
+    /* background-color: #03254EF3; */
+    /* background-image: linear-gradient(to left#393E41, #03254E); */
+    background-color:rgba(0, 0, 0, 0.673);
     padding:2em;
     position: fixed;
     top:0;
