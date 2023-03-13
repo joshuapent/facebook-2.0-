@@ -21,7 +21,7 @@ app.use('Home', userController);
 app.use('Feed', feedController);
 
 app.get('/*', (req, res) => {
-    res.send(<h1>Page not found</h1>)
+    res.send('<h1>Page not found</h1>')
 })
 
 app.listen('4000', () => {
