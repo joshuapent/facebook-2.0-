@@ -11,6 +11,7 @@ MVP (Minimum Viable Product)
   - Should be able to edit personal information
 - Feed page to see other user activity.
 - Ability to search up other users.
+- Bcrpyt
 
 
 Stretch Features: 
@@ -23,7 +24,7 @@ Stretch Features:
   - Limit feed page to exclusively friends/followed pages.
 - Like/dislike button, ability to comment on a post. 
 - Share feature.
-- Bcrpyt/GoogleAuth to encode passwords for security. 
+- GoogleAuth to encode passwords for security. 
 - Make search feature more user-friendly.
 - Allow the ability to message others.
 
