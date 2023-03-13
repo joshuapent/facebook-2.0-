@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JevMedia</title>
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
+<%- include('./loginPartials/header.ejs') %>
+
 <div class="center">
     <div class="login-container">
     <div class="left">
         <img src='https://i.imgur.com/RUi9BFi.png' alt="Jev Logo">
     </div>
     <div class="right">
-        <form action="" class="login">
-            <div class="username">
-                <label for="username">Username:</label>
-               <input type="text" name="username" id="username">
+        <form method="POST" action="/login" class="login">
+            <div class="email">
+                <label for="email">Email:</label>
+               <input type="text" name="email" id="email">
             </div>
             <div class="password">
                 <label for="password">Password:</label>
-                <input type="text" name="password" id="password">
+                <input type="password" name="password" id="password">
             </div>
+            <input type="submit" name="submit" id="submit" value="Login!">
         </form>
         <div class="forgot">
             <button>
@@ -39,7 +32,7 @@
 </div>
 
 
-<%-include('../partials/footer.ejs') %>
+<%- include('./loginPartials/footer.ejs') %>
 
 
 

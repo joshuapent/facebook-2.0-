@@ -1,0 +1,32 @@
+<%- include('./loginPartials/header.ejs') %>
+
+<div class="center">
+    <div class="right">
+        <form method="POST" action="/registerRoute" class="register">
+            <div class="email">
+                <label for="email">Email:</label>
+               <input type="text" name="email" id="email">
+            </div>
+            <div class="name">
+                <label for="email">Full name:</label>
+               <input type="text" name="name" id="name">
+            </div>
+            <div class="DOB">
+                <label for="DOB">Date of Birth:</label>
+               <input type="date" name="DOB" id="DOB">
+            </div>
+            <div class="password">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="password">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">
+            </div>
+            <input type="submit" name="submit" id="submit" value="Register!">
+        </form>
+    </div>
+</div>
+
+
+<%- include('./loginPartials/footer.ejs') %>
