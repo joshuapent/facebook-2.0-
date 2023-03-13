@@ -1,8 +1,10 @@
 body{
     margin: 0;
     padding:0;
-    background-color: antiquewhite;
+    background-color:#393E41;
+    /* #8D909B grey, for outer margin, #03254E darkblue*/
     height:90vh;
+    z-index: 0;
        
 }
 
@@ -33,8 +35,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    background-color:rgba(43, 105, 177, 0.408);
+    background-color: #03254E;
     padding:2em;
+    position: fixed;
+    top:0;
+    width: 100%;
 }
 .nav-left{
 margin: 0 5em;
@@ -59,10 +64,12 @@ nav img{
 }
 
 .profile-container{
-    display:flex;
+    /* display:flex;
     flex-direction: column;
-    justify-content: center;
-    margin:0;
+    justify-content: center; */
+    margin: 0 4em;
+    background-color: #8D909B;
+    z-index: 1;
 }
 
 .profile-navbar{
@@ -121,4 +128,6 @@ footer{
     text-align: center;
     font-weight: 700;
 }
-
+.profile-bio {
+    color:antiquewhite;
+}
