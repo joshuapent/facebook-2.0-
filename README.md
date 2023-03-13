@@ -37,9 +37,10 @@ User experience:
 
   Our number one goal with the user experience is to ensure that every feature added/included is seamless and functioning. Quality over quantity is our focus for this project. Ideally, we would like to create a webpage very similar to facebook, with much if not most of the functionality of the mega-site, while also adding our own personal flair to its bland design and features. 
 
+![Logo](https://user-images.githubusercontent.com/124005766/224733745-a3a64467-1167-4af8-b3c9-9e6c1896e042.png)
 
+![scratch_paper-1_720](https://user-images.githubusercontent.com/124005766/224733895-b6863fb4-5fad-4fe5-bda8-df60f635de20.jpg)
 
+![scratch_paper-2_720](https://user-images.githubusercontent.com/124005766/224733919-90c0ab24-6363-4920-bad2-765ba6788e4e.jpg)
 
-
-
-
+![scratch_paper-3_720](https://user-images.githubusercontent.com/124005766/224733937-3ca90a57-74e0-4448-a141-e671bbbf9579.jpg)
