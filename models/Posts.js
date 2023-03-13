@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const usersSchema = new mongoose.Schema (
+const postsSchema = new mongoose.Schema (
     {
         text: {
             type: String,
@@ -9,6 +9,9 @@ const usersSchema = new mongoose.Schema (
         comments: {},
         likes: {},
         dislikes: {}
+    },
+    {
+        timestamps: true,
     }
 )
 
