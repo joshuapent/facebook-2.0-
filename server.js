@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override')
 
+const session = require('express-session');
+const MongoStore = require("connect-mongo");
+require('dotenv').config();
+
 const loginController = require('./controllers/login.js')
 const userController = require('./controllers/user.js')
 const feedController = require('./controllers/feed.js')
@@ -13,6 +17,18 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 
 app.use(methodOverride('_method'));
+
+app.use(
+    session({
+        store: MongoStore.create({ mongoUrl: process.env.CONNECT_THIS }),
+        secret: "super secret",
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24 * 7, // one week
+        },
+    })
+);
 
 app.use('/', loginController);
 
