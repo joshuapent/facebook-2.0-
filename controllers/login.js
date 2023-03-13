@@ -38,10 +38,10 @@ router.post('/loginRoute', async(req, res, next) => {
         const validAttempt = await bcrypt.compare(loginAttempt.password, userExists.password);
         console.log(validAttempt);
         if(validAttempt === false) return res.send("Email or password is incorrect");
-        // req.session.currentUser = { revisit this...
-        //     id: userExists._id,
-        //     email: userExists.email,
-        // };
+        req.session.currentUser = { 
+            id: userExists._id,
+            email: userExists.email,
+        };
         return res.redirect('/home')
     } catch (err) {
         console.log(err);
