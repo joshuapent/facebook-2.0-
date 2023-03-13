@@ -16,9 +16,9 @@ app.use(methodOverride('_method'));
 
 app.use('/', loginController);
 
-app.use('Home', userController);
+app.use('/home', userController);
 
-app.use('Feed', feedController);
+app.use('/feed', feedController);
 
 app.get('/*', (req, res) => {
     res.send('<h1>Page not found</h1>')
