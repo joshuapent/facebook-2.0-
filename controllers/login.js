@@ -31,7 +31,7 @@ router.get('/logout', (req, res) => {
     }
 })
 
-router.post('/', async(req, res, next) => {
+router.post('/login', async(req, res, next) => {
     try {
         const loginAttempt = req.body;
         const userExists = await Users.findOne({email: loginAttempt.email});
@@ -49,7 +49,7 @@ router.post('/', async(req, res, next) => {
     }
 })
 
-router.post('/', async(req, res, next) => {
+router.post('/registerRoute', async(req, res, next) => {
     try {
          const userInfo = req.body;
          console.log(userInfo);
