@@ -1,7 +1,41 @@
-<%- include('../partials/head.ejs', {styleSheet: '/styles/main.css'}) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JevMedia</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
 
-<h1>JevMedia</h1>
-
+<div class="login-container">
+    <div class="left">
+    <img src='https://i.imgur.com/RUi9BFi.png' alt="Jev Logo">
+    </div>
+    <div class="right">
+        <form action="">
+            <div class="username">
+                <label for="username">Username:</label>
+               <input type="text" name="username" id="username">
+            </div>
+            <div class="password">
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="password">
+            </div>
+        </form>
+        <div class="forgot">
+            <button>
+                <a href="/forgotpassword">Forgot password?</a>
+            </button>
+        </div>
+        <div class="register">
+            <button>
+                <a href="/register">Register!</a>
+            </button>
+        </div>
+    </div>
+</div>
 
 
 <%-include('../partials/footer.ejs') %>
