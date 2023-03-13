@@ -22,6 +22,9 @@ const usersSchema = new mongoose.Schema (
             age: {},
             homeTown: {}
         }
+    },
+    {
+        timestamps: true,
     }
 )
 
