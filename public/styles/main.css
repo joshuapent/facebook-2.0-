@@ -152,7 +152,45 @@ nav img{
     padding:1em;
     margin:-1em;   
 }
+
+.newPost{
+    display: none;
+        position: fixed;
+        top: calc(50% - 150px);
+        left: calc(50% - 250px); 
+    z-index: 9;
+   
+}
+
+.addPost{
+    background: none;
+    border:none;
+    z-index: 1;
+
+    /* position:fixed; */
+}
+
+.form-container{
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+   /* text-align: center; */
+   font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.822);
+    padding:1.5em;
+    /* margin:1em; */
+    border: #03254E solid 1px;
+    border-radius: 1em;
+    height: 20em;
+    width: 20em;
     
+
+}
+
+
 .profile-bio {
     color:greenyellow;
 }
@@ -233,6 +271,8 @@ border-right:1px solid black
     text-align: center;
     padding:0.5em;
 }
+
+
 
 
 

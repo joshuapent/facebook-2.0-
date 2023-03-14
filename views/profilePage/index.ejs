@@ -4,12 +4,13 @@
 <div class="profile-container">
 
     <div class="profile-navbar">
+        
         <div class="profile-image">
             <img src="https://toppng.com/uploads/thumbnail/yoda-silhouette-11562913728qpwtuuynq1.png" alt="">
         </div>
         <div class="profile-bio">
-            <h5>Username:</h5>
-            <h5>Bio</h5>
+            <!-- <h5>Username:</h5>
+            <h5>Bio</h5> -->
         </div>
         <div class="follow-DM">
             <button>
@@ -19,17 +20,24 @@
                 <a href="">Message</a>
             </button>
         </div>
-        
+        <button class="addPost" onclick="openForm()"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="black" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg></button>
+        <div class="newPost" id="addForm">
+            <form method="POST" action="/newPost" class="form-container">
+                <input type="text" name="post" id="post" placeholder="Description">
+                <input type="file" value="choose a file">
+                <input type="button" onclick="closeForm()" value="Cancel">
+                <input type="submit" value="Post">
+            </form>
+        </div>
     </div>
 
         <div class="line"><hr></div>
-    <div class="newPost">
-        <form method="POST" action="/newPost">
-            <label for="post">Make a new Post!</label>
-            <input type="text" name="post" id="post">
-            <input type="file" >
-            <input type="submit">
-        </form>
+    
         <form method="POST" action="/Dislike">
             <button class="Dislike">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-hand-thumbs-down" viewBox="0 0 16 16">
@@ -46,7 +54,7 @@
                 Like
             </button>           
         </form>
-    </div>
+    
     <div class="profile-posts">
         <div class="post-history">
             <img src="https://images.unsplash.com/photo-1678063412571-c09ec5f4a5cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
@@ -66,5 +74,14 @@
 
 </div>
 
+<script>
+   function openForm(){
+    document.getElementById('addForm').style.display = "block";
+   }
+
+   function closeForm(){
+    document.getElementById('addForm').style.display = "none";
+   }
+</script>
 
 <%-include('../partials/footer.ejs') %>
