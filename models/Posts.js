@@ -4,9 +4,14 @@ const postsSchema = new mongoose.Schema (
     {
         text: {
             type: String,
+            required: [true, "Title"]
         }, 
-        img: {},
-        comments: {},
+        img: {
+            type: String
+        },
+        comments: {
+            type: String
+        },
         likes: {},
         dislikes: {}
     },
