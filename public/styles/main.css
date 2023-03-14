@@ -21,10 +21,7 @@ body{
     justify-content: space-evenly;
    gap:10em;
 }
-.login-links {
-    color: #03254E;
 
-}
 
 .center{
     display: flex;
@@ -37,15 +34,49 @@ body{
 .right{
     display:flex;
     flex-direction: column;
-    border-left: solid black 1px;
+    border: solid black 3px;
+    padding:5em;
+   background-image: radial-gradient(#8D909B, darkgray);
+    border-radius: 0.5em;
     justify-content: space-evenly;
     gap:5px;
 }
+
+.login{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:15px;
+    margin:1em;
+    padding:1em
+}
+
+
+#email, #password{
+    display:block;
+    width: 15em;
+    height: 1.5em;
+    border: solid black 2px;
+    font-size: 15px;
+    padding:0.5em;
+    margin:2px;
+}
+
+.right form #email,
+#password{
+ translate: 0 -50px;
+}
+.inline{
+    display:flex;
+   justify-content: space-around;
+}
+
 nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height: 9vh;
+    height: 2em;
     /* background-color: #03254EF3; */
     /* background-image: linear-gradient(to left#393E41, #03254E); */
     background-color:rgba(0, 0, 0, 0.673);
@@ -145,22 +176,50 @@ footer{
     color:rgba(119, 127, 220, 0.803)
 }
 
-button, #email, #password, #submit {
+ .right #submit{
+    translate: 0 -50px;
+ }
+
+ #submit, .login-links { 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color:#03254E;
     background-color: rgb(228, 226, 225);
     font-family: "Tajawal";
-    font-size: 15px;
-    text-decoration: underline;
-    width: fit-content;
+    font-size: 1em;
+    /* text-decoration: underline; */
+    border:none;
+    text-decoration: none;
+    text-align: center;
+    padding:0.5em 1em;
+    gap: 5px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    
 }
 
-button:hover {
-    /* color:rgb(228, 226, 225); */
-    background-color:#03254E;
-    box-shadow: 0 12px 16px 0 rgba(235, 231, 231, 0.24),0 17px 50px 0 rgba(244, 239, 239, 0.19);
+
+.login-links:hover, #submit:hover{
+    color:white;
+    background-color: #03254E;
 }
-.login-links:hover {
-    color: rgb(228, 226, 225);
+.login-line{
+    border: solid black 1px;
+    width: 20em;
+    margin:1px;
+    translate: 0 -40px;
+
+}
+.login-links{
+    text-decoration: none;
+    color: #03254E;
+    translate: 0 -15px;
+}
+
+.login-links:hover{
+ color:white
 }
 
 /* nav icons */

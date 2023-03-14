@@ -8,24 +8,28 @@
     <div class="right">
         <form method="POST" action="/loginRoute" class="login">
             <div class="email">
-                <label for="email">Email:</label>
-               <input type="text" name="email" id="email">
+                <!-- <label for="email">Email:</label> -->
+               <input type="text" name="email" id="email" placeholder="E-mail">
             </div>
             <div class="password">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
+                <!-- <label for="password">Password:</label> -->
+                <input type="password" name="password" id="password" placeholder="Password">
             </div>
-            <input class="login-links" type="submit" name="submit" id="submit" value="Login!">
-        </form>
+
+            
+                <input type="submit" name="submit" id="submit" value="Login" class="login-links">
+            </form>
+            <hr class="login-line">
+        <div class="inline">
+
         <div class="forgot">
-            <button>
+            
                 <a class="login-links" href="/forgotpassword">Forgot password?</a>
-            </button>
+      
         </div>
             <div class="register">
-                <button>
-                    <a class="login-links" href="/register">Register!</a>
-                </button>
+                    <a class="login-links" href="/register">Sign Up</a>
+                </div>
             </div>
         </div>
     </div>
