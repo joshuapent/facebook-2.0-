@@ -49,7 +49,7 @@ body{
     flex-direction: column;
     align-items: center;
     border: solid black 3px;
-    padding: 2.5em;
+    padding: 1.5em 2.5em;
     background-image: radial-gradient(#8D909B, darkgray);
     border-radius: 0.5em;
     justify-content: space-around;
