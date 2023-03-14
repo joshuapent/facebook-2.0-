@@ -4,7 +4,10 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
     try {
-        res.render('profilePage/feed.ejs')
+        let context = {
+            user: req.session.currentUser.userExists,
+        }
+        res.render('profilePage/feed.ejs', context)
     } catch(err) {
         console.log(err);
         return next();
