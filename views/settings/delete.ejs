@@ -1,8 +1,13 @@
 <%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
 
-<h1>Are you sure you want to delete your account?</h1>
-<form method="POST" action="/settings/delete?_method=DELETE">
-    <input type="submit" value="Delete My Account">
-</form>
+<div class="settings-container">
+    <h1>Are you sure you want to delete your account?</h1>
+    <div class="settings-options">
+    <form method="POST" action="/settings/delete?_method=DELETE">
+        <input type="submit" value="Delete My Account">
+    </form>
+    </div>
+
+</div>
 
 <%-include('../partials/footer.ejs') %>

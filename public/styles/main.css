@@ -195,6 +195,47 @@ display: flex;
     margin: 0 15px 15px 0;
 }
 
+.settings-options{
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+height:17em;
+width: 12em;
+margin:20px;
+border-right:1px solid black
+/* background-color: black; */
+}
+
+.settings-options a, .settings-options input{
+    text-decoration: none;
+    color:black;
+    font-size:1.3em;
+    padding: 8px;
+    margin:5px;
+    border:none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.settings-options a:hover ,.settings-options input:hover{
+    text-decoration: underline;
+}
+
+.settings-container{
+    height:25em;
+    margin: 4em 4em 3em 4em;
+        background-color: #8D909B;
+        z-index: 1;
+}
+
+.settings-container h1{
+    text-align: center;
+    padding:0.5em;
+}
+
+
+
 footer{
     height: 4vh;
     text-align: center;
