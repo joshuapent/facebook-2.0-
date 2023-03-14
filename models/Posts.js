@@ -4,6 +4,7 @@ const postsSchema = new mongoose.Schema (
     {
         text: {
             type: String,
+            required: [true, "..."]
         }, 
         img: {},
         comments: {},
