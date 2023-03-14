@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
 body{
     margin: 0;
     padding:0;
+    font-family: "Tajawal";
+    font-size: 16px;
     background-image: radial-gradient(#393E41, #03254E);
     background-size: contain;
     background-position: center;
@@ -12,11 +15,15 @@ body{
     color:white;
 }
 
-.login-container{
+.login-container {
     align-items: center;
     display: flex;
     justify-content: space-evenly;
    gap:10em;
+}
+.login-links {
+    color: #03254E;
+
 }
 
 .center{
@@ -85,8 +92,11 @@ nav img{
     justify-content: space-evenly;
     align-items: center;
     padding:1em;
-    margin:-1em;
+    margin:-1em;   
+}
     
+.profile-bio {
+    color:greenyellow;
 }
 
 .line{
@@ -99,8 +109,6 @@ display: flex;
     width: 75em;;
     border: 0.5px solid black;
 }
-
-
 
 .profile-image img{
     height:5em;
@@ -129,13 +137,34 @@ display: flex;
     margin: 0 15px 15px 0;
 }
 
-
-
 footer{
-    height: 5vh;
+    height: 4vh;
     text-align: center;
     font-weight: 700;
+    font-size:10px;
+    color:rgba(119, 127, 220, 0.803)
 }
-.profile-bio {
-    color:antiquewhite;
+
+button, #email, #password, #submit {
+    color:#03254E;
+    background-color: rgb(228, 226, 225);
+    font-family: "Tajawal";
+    font-size: 15px;
+    text-decoration: underline;
+    width: fit-content;
+}
+
+button:hover {
+    color:rgb(228, 226, 225);
+    background-color:#03254E;
+}
+.login-links:hover {
+    color: rgb(228, 226, 225);
+}
+
+/* nav icons */
+svg {
+    background-color:none;
+    height: 30px ;
+    width: 30px;
 }
