@@ -1,29 +1,32 @@
 <%- include('./loginPartials/header.ejs') %>
 
 <div class="center">
-    <div class="right">
+    <div class="registerbox">
+        <h3>Sign-up</h3>
         <form method="POST" action="/registerRoute" class="register">
             <div class="email">
-                <label for="email">Email:</label>
-               <input type="text" name="email" id="email">
+                <!-- <label for="email">Email:</label> -->
+               <input type="text" name="email" id="email" placeholder="E-mail">
             </div>
             <div class="name">
-                <label for="email">Full name:</label>
-               <input type="text" name="name" id="name">
+                <!-- <label for="email">Full name:</label> -->
+               <input type="text" name="name" id="name" placeholder="Name">
             </div>
             <div class="DOB">
-                <label for="DOB">Date of Birth:</label>
-               <input type="date" name="DOB" id="DOB">
+                <!-- <label for="DOB">Date of Birth:</label> -->
+               <input type="text" name="DOB" id="DOB" placeholder="Date of Birth" onfocus="(this.type='date')" >
             </div>
             <div class="password">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
+                <!-- <label for="password">Password:</label> -->
+                <input type="password" name="password" id="password" placeholder="Password">
             </div>
             <div class="password">
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" name="confirmPassword" id="confirmPassword">
+                <!-- <label for="confirmPassword">Confirm Password:</label> -->
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
             </div>
-            <input type="submit" name="submit" id="submit" value="Register!">
+            <div class="register-input">
+            <input type="submit" name="submit" id="submit" value="Register!" >
+            </div>
         </form>
     </div>
 </div>

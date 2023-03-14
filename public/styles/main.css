@@ -23,6 +23,8 @@ body{
 }
 
 
+
+
 .center{
     display: flex;
     justify-content:space-evenly;
@@ -42,6 +44,18 @@ body{
     gap:5px;
 }
 
+.registerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 3px;
+    padding: 2.5em;
+    background-image: radial-gradient(#8D909B, darkgray);
+    border-radius: 0.5em;
+    justify-content: space-around;
+    gap: 5px;
+}
+
 .login{
     display:flex;
     flex-direction: column;
@@ -53,18 +67,31 @@ body{
 }
 
 
-#email, #password{
-    display:block;
+#email, #password, #confirmPassword, #name, #DOB{
+   display:block;
     width: 15em;
     height: 1.5em;
     border: solid black 2px;
     font-size: 15px;
     padding:0.5em;
-    margin:2px;
+    margin:10px;
+    
+   
 }
 
-.right form #email,
-#password{
+.registerbox h3{
+    text-align: center;
+    font-size: 2em;
+
+}
+
+.register-input{
+   display:flex;
+   justify-content: center;
+}
+
+
+.login #email, .login #password{
  translate: 0 -50px;
 }
 .inline{
@@ -176,7 +203,7 @@ footer{
     color:rgba(119, 127, 220, 0.803)
 }
 
- .right #submit{
+ .login #submit{
     translate: 0 -50px;
  }
 
