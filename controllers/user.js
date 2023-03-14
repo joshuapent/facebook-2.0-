@@ -4,7 +4,10 @@ const { Users } = require('../models')
 
 router.get('/', async (req, res, next) => {
     try {
-        res.render('profilePage/index.ejs')
+        let context = {
+            user: req.session.currentUser.userExists,
+        }
+        res.render('profilePage/index.ejs', context)
     } catch(err) {
         console.log(err);
         return next();

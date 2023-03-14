@@ -18,7 +18,7 @@ router.get('/register', async (req, res, next) => {
     } catch(err) {
         console.log(err);
         return next();
-    }
+    } 
 })
 
 router.get('/logout', (req, res) => {
@@ -38,10 +38,8 @@ router.post('/loginRoute', async(req, res, next) => {
         const validAttempt = await bcrypt.compare(loginAttempt.password, userExists.password);
         console.log(validAttempt);
         if(validAttempt === false) return res.send("Email or password is incorrect");
-        req.session.currentUser = { 
-            id: userExists._id,
-            email: userExists.email,
-        };
+        req.session.currentUser = {userExists};
+    
         return res.redirect('/home')
     } catch (err) {
         console.log(err);
