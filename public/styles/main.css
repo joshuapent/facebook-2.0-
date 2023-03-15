@@ -342,3 +342,10 @@ svg {
     height: 30px ;
     width: 30px;
 }
+
+[title="Feed"] {
+    color: blue;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
