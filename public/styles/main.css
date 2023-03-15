@@ -317,6 +317,59 @@ border-right:1px solid black
     padding: 0.5em
 }
 
+.image-show{
+    display: flex;
+    height: 80vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4em;
+        padding:2em;
+        background-color: #8D909B;
+        z-index: 1;
+       
+}
+
+.container-display{
+    display:flex;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.297);
+   
+
+}
+.comments-container{
+    display:flex;
+    flex-direction: column;
+    border: solid 2px black;
+    /* height:25em;
+    width: 20em; */
+    margin-right:3em;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap:10em;
+    margin:2em;
+  
+   
+}
+
+.post-comments{
+    display: flex;
+    
+    /* transform: translate(10.3em, 21em); */
+}
+
+.only-image{
+    display:flex;
+    padding: 5em;
+}
+
+.only-image img{
+  height:22em;
+}
+
+
+
+
 
 footer{
     height: 4vh;
@@ -373,11 +426,11 @@ footer{
 }
 
 /* nav icons */
-/* svg {
+svg {
     background-color:none;
-    height: 30px ;
-    width: 30px;
-} */
+    height: 35px ;
+    width: 35px;
+}
 
 [title="Feed"] {
     color: blue;
