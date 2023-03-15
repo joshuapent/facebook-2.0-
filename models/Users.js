@@ -24,7 +24,8 @@ const usersSchema = new mongoose.Schema (
             profilePic: {},
             age: {},
             homeTown: {}
-        }
+        },
+        posts: {}
     },
     {
         timestamps: true,

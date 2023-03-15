@@ -10,6 +10,7 @@ const loginController = require('./controllers/login.js')
 const userController = require('./controllers/user.js')
 const feedController = require('./controllers/feed.js')
 const settingsController = require('./controllers/settings.js')
+const searchController = require('./controllers/search.js')
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -32,6 +33,8 @@ app.use(
 
 
 app.use('/', loginController);
+
+app.use('/', searchController)
 
 app.use('/home', userController);
 
