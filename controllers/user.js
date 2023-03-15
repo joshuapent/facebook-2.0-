@@ -36,7 +36,14 @@ router.get('/', async (req, res, next) => {
 
 router.get('/posts', async (req, res, next) => {
     try {
-        res.render('profilePage/picShow.ejs')
+        const showPost = await Posts.findOne({Posts})
+      console.log(showPost)
+        let context = 
+    { 
+        post: showPost,
+        user: req.session.currentUser.userExists
+    }
+        res.render('profilePage/picShow.ejs', context)
     } catch(err) {
         console.log(err);
         return next();
