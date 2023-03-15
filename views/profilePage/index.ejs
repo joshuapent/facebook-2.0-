@@ -28,10 +28,11 @@
             </svg></button>
         <div class="newPost" id="addForm">
             <form method="POST" action="/newPost" class="form-container">
+                <label for="img" id="img">Upload Image</label>
+                <input type="file" name="uploadfile" id="img" style="display:none;">
                 <input type="text" name="post" id="post" placeholder="Description">
-                <input type="file" value="choose a file">
-                <input type="button" onclick="closeForm()" value="Cancel">
                 <input type="submit" value="Post">
+                <input type="button" onclick="closeForm()" value="Cancel">
             </form>
         </div>
     </div>
