@@ -5,12 +5,21 @@
     <form method="POST" action="/user/<%=user._id %>?_method=PUT">
     <div class="Edit-options">
         <label for="name">Edit Name</label>
-        <input type="text" name="name" id="name" placeholder="<%=user.name%>"> 
+        <input type="text" name="name" id="name" placeholder="<%=user.name%>" value=<%=user.name%>>
     </div>
     <div>
         <label for="image">Edit Profile Picture</label>
-        <input type="text" name="information.profilePic" id="information.profilePic" value=<%=user.information.profilePic%>>
+        <input type="img" name="information.profilePic" id="information.profilePic" placeholder="<%=user.information.profilePic%>" value=<%=user.information.profilePic%>>
     </div>
+    <div>
+        <label for="age">Edit Age</label>
+        <input type="number" name="user.information.age" id="user.information.age" placeholder="<%=user.information.age%>" value=<%=user.information.age%>>   
+    </div>
+    <div>
+        <label for="hometown">Hometown</label>
+        <input type="text" name="hometown" id="hometown" value=<%=user.information.age%>>
+    </div>
+    <input type="submit" value="Submit Changes">
     </form>
 </div>
 <%-include('../partials/footer.ejs') %>
