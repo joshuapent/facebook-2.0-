@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { Users } = require('../models')
+const { Posts } = require('../models')
 
 router.get('/*', (req, res, next) => {
     try {
@@ -17,11 +18,15 @@ router.get('/*', (req, res, next) => {
     }
 })
 
+
 router.get('/', async (req, res, next) => {
     try {
+        const allPosts = await Posts.find({})
         let context = {
             user: req.session.currentUser.userExists,
+            post: allPosts
         }
+        console.log(Posts)
         res.render('profilePage/index.ejs', context)
     } catch(err) {
         console.log(err);
@@ -39,8 +44,6 @@ router.get('/posts', async (req, res, next) => {
 })
 
 
-
-
 // router.get('/user/:id', async (req, res, next) => {
 //     try {
 //         res.render('/user/profile.ejs')
@@ -50,18 +53,21 @@ router.get('/posts', async (req, res, next) => {
 //     }
 // })
 
-router.post('/', async (req, res, next) => {
+router.post('/newPost', async (req, res, next) => {
     try {
         console.log(req.body);
-        const newPost = await this.post.create(req.body);
+        const newPost = await Posts.create(req.body);
         // mySeedData.push(newPost);
-        console.log(newPost);
-        res.redirect('/post');
+        // console.log(newPost);
+        res.redirect('/home')
+        
     } catch(err) {
         console.log(err);
         return next();
     }
 })
+
+
 
 //params.sting ?
 router.put('/:id', async(req, res, next) => {

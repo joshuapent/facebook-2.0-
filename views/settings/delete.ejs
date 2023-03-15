@@ -2,11 +2,11 @@
 
 <div class="settings-container">
     <h1>Are you sure you want to delete your account?</h1>
+    <div class="settings-options">
+        <a href="/logout">Logout</a>
+        <a href="/settings/DeleteMyAccount" title="Delete Account" alt="Delete Account">Delete Account</a>
+    </div>
     <div class="DeletePage">
-        <div class="settings-options">
-            <a href="/logout">Logout</a>
-            <a href="/settings/DeleteMyAccount" title="Delete Account" alt="Delete Account">Delete Account</a>
-        </div>
         <div class="DeleteOption">
             <h4>Yes I'm sure</h4> 
             <form method="POST" action="/settings/delete?_method=DELETE">
