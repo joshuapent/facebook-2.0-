@@ -281,6 +281,37 @@ border-right:1px solid black
     padding:0.5em;
 }
 
+.feed-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4em 4em 3em 4em;
+    background-color: #8D909B;
+    z-index: 1;
+}
+
+.image-container{
+    margin:2em;
+
+}
+
+.like-dislike{
+    display:flex;
+    gap:5px;
+    justify-content: flex-end;
+    margin:0.5em 0;
+    
+}
+
+.like-dislike button{
+    /* background: none;*/
+    border-radius: 0.5em;
+    border:none;
+    background-color: rgba(0, 0, 0, 0.457);
+    padding: 0.5em
+}
+
 
 footer{
     height: 4vh;
