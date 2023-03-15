@@ -53,4 +53,17 @@ router.delete('/delete', async (req, res, next) => {
     }
 })
 
+router.get('/:id/edit', async (req, res, next) => {
+    try {
+        const profileEdit = await Users.findById(req.session.currentUser.id);
+    
+        console.log(profileEdit);
+        res.render('settings/edit.ejs', context)
+    } catch(someEdit) {
+            console.log(someEdit);
+            return next();
+        
+    }
+})
+
 module.exports = router;
