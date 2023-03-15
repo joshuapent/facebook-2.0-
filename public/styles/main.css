@@ -296,6 +296,11 @@ border-right:1px solid black
 
 }
 
+.image-container img{
+    height: 20em;
+      
+}
+
 .like-dislike{
     display:flex;
     gap:5px;
@@ -368,11 +373,11 @@ footer{
 }
 
 /* nav icons */
-svg {
+/* svg {
     background-color:none;
     height: 30px ;
     width: 30px;
-}
+} */
 
 [title="Feed"] {
     color: blue;
@@ -382,7 +387,16 @@ svg {
 }
 
 .DeletePage {
+    display:inline;
+    
+
+}
+
+.DeleteOption{
     display: flex;
-
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        text-align: center;
+        transform: translate(0, -18em);
 }
