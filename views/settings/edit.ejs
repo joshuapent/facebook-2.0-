@@ -1,0 +1,16 @@
+<%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
+
+<div class="Edit-container">
+    <h1>Edit Profile</h1>
+    <form method="POST" action="/user/<%=user._id %>?_method=PUT">
+    <div class="Edit-options">
+        <label for="name">Edit Name</label>
+        <input type="text" name="name" id="name" placeholder="<%=user.name%>"> 
+    </div>
+    <div>
+        <label for="image">Edit Profile Picture</label>
+        <input type="text" name="information.profilePic" id="information.profilePic" value=<%=user.information.profilePic%>>
+    </div>
+    </form>
+</div>
+<%-include('../partials/footer.ejs') %>
