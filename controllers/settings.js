@@ -45,6 +45,7 @@ router.get('/DeleteMyAccount', async (req, res, next) => {
 router.delete('/delete', async (req, res, next) => {
     try {
         const deleteAccount = await Users.findByIdAndDelete(req.session.currentUser.userExists._id); 
+        req.session.destroy();
         res.redirect('/');
     } catch (err) {
         console.log(err);
