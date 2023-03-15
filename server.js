@@ -30,6 +30,7 @@ app.use(
     })
 );
 
+
 app.use('/', loginController);
 
 app.use('/home', userController);

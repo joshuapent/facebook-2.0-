@@ -3,6 +3,21 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const { Users } = require('../models')
 
+router.get('/', (req, res, next) => {
+    try {
+        console.log(req.session.currentUser)
+        if(typeof req.session.currentUser !== 'undefined') {
+            res.redirect('/home')
+        } 
+        else {
+            next();
+        }
+    } catch (err) {
+        console.log(err);
+        return next();
+    }
+})
+
 router.get('/', async (req, res, next) => {
     try {
         res.render('login/login.ejs')
