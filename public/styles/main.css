@@ -10,9 +10,11 @@ body{
     /* background-repeat: no-repeat; */
      background-color:#03254E;
     /* #8D909B grey, for outer margin, #03254E darkblue*/
-    height:90vh;
+    
     z-index: 0;
     color:white;
+    height:100%;
+    width:100%;
 }
 
 .login-container {
@@ -79,6 +81,33 @@ body{
    
 }
 
+.ejsUser p{
+   text-align: center;
+   margin-top:15px;
+text-transform: capitalize;
+
+}
+
+.follow-DM button{
+background-color: #03254E;
+border:none;
+padding:7px;
+border-radius:0.5em;
+text-align: center;
+margin: 0 5px;
+transition: 0.2s;
+}
+
+.follow-DM button:hover{
+    transform: scale(1.05);
+    background-color: #393E41;
+}
+
+.follow-DM button a{
+    text-decoration: none;
+    color:white;
+}
+
 .registerbox h3{
     text-align: center;
     font-size: 2em;
@@ -132,6 +161,8 @@ margin: 0 5em;
     text-decoration: underline;
 }
 
+
+
 nav img{
     height:4em;
 }
@@ -140,9 +171,11 @@ nav img{
     /* display:flex;
     flex-direction: column;
     justify-content: center; */
-    margin: 5em 4em 3em 4em;
+    margin: 5em 4em 0.2em 4em;
     background-color: #8D909B;
     z-index: 1;
+    height:90%;
+   
 }
 
 .profile-navbar{
@@ -156,9 +189,9 @@ nav img{
 
 .newPost{
     display: none;
-        position: fixed;
-        top: calc(50% - 200px);
-        left: calc(50% - 250px); 
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 250px); 
     z-index: 9;
    
 }
@@ -169,6 +202,13 @@ nav img{
     z-index: 1;
 
     /* position:fixed; */
+}
+
+.addPost svg{
+    transition: .5s;
+}
+.addPost svg:hover{
+    transform: scale(1.2);
 }
 
 .form-container{
@@ -214,7 +254,7 @@ display: flex;
 
 .line hr{
     width: 75em;;
-    border: 0.5px solid black;
+    border: 0.5px solid rgb(255, 255, 255);
 }
 
 .profile-image img{
@@ -250,8 +290,10 @@ align-items: flex-start;
 height:17em;
 width: 12em;
 margin:20px;
-border-right:1px solid black
+border-right:1px solid black;
+
 /* background-color: black; */
+
 }
 
 .settings-options a, .settings-options input{
@@ -272,9 +314,10 @@ border-right:1px solid black
 
 .settings-container{
     height:25em;
-    margin: 4em 4em 3em 4em;
+    margin: 4em 4em 1em 4em;
         background-color: #8D909B;
         z-index: 1;
+        height: 85vh;
 }
 
 .settings-container h1{
@@ -293,6 +336,7 @@ border-right:1px solid black
 }
 
 .image-container{
+
     margin:2em;
 
 }
@@ -300,6 +344,22 @@ border-right:1px solid black
 .image-container img{
     height: 20em;
       
+}
+.image-animation img, .nav-right svg{
+    transition: 0.3s;
+    z-index:2;
+}
+
+.image-animation img:hover {
+transform: scale(1.01);
+box-shadow: #03254E 1px 1px 2px 5px;
+}
+
+.nav-icon{
+    display:inline;
+}
+.nav-right svg:hover{
+transform: scale(1.2);
 }
 
 .like-dislike{
@@ -319,17 +379,19 @@ border-right:1px solid black
     border-radius: 0.5em;
     border:none;
     background-color: rgba(0, 0, 0, 0.457);
-    padding: 0.5em;
+    padding: 10%;
+    margin:10%
 }
 .trash {
     display:flex;
     align-items: center;
-    gap:10px
+    gap:5px;
+    transform: translate(-20px, 0);
 }
 
 .picShow-container{
     display:flex;
-    height:55vh;
+    /* height:55vh; */
     justify-content: space-evenly;
     align-items: center;
     margin: 4em 4em 3em 4em;
@@ -338,18 +400,20 @@ border-right:1px solid black
     }
 .picShow-comments{
     display:flex;
-    justify-content: center;
-    gap:2em;
-    padding:3vh;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:1.5em;
+    gap:-15em;
     background-color: rgba(0, 0, 0, 0.443);
-   margin:1.5vh;
-    height:45vh;
-    width: 75vw;
+    margin:5%;
+    height:55%;
+    /* width: 65% */
 }
 
 .picShow img{
-    height:15rem;
-    width: 25rem;
+    height:85%;
+   
+    width: 20em;
 }
 
 .comments{
@@ -357,16 +421,30 @@ border-right:1px solid black
     align-items: flex-end;
     background-color: white;
     border: #03254E 3px solid;
+    height: 25em;
+}
+
+.caption {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+footer p{
+/* position:relative; */
+bottom:0;
+text-align: center;
 }
 
 
-
 footer{
-    height: 4vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     font-weight: 700;
-    font-size:10px;
-    color:rgba(119, 127, 220, 0.803)
+    font-size:0.8em;
+    color:rgba(254, 254, 254, 0.803);
+    /* background-color: #8D909B; */
 }
 
  .login #submit{
@@ -392,6 +470,8 @@ footer{
     cursor: pointer;
     
 }
+
+
 
 
 .login-links:hover, #submit:hover{

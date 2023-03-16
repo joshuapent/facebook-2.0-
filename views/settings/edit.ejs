@@ -5,7 +5,21 @@
     <form method="POST" action="/settings/edit/<%=user._id%>?_method=PUT">
     <div class="Edit-options">
         <label for="name">Edit Name</label>
-        <input type="text" name="name" id="name" placeholder="<%=user.name%>" value=<%=user.name%>>
+        <input type="text" name="name" id="name" placeholder="<%=user.name%>" alt="<%=user.name%>"value=<%=user.name%>>
+    </div>
+    <div>
+        <label for="image">Update Profile Picture</label>
+        <input type="text" name="image" id="image" placeholder="<%=user.information.profilePic%>" 
+        alt="<%=user.name%>'s Profile Picture" value="<%=user.information.profilePic%>">
+    </div>
+    <div>
+        <label for="bio">Update Bio</label>
+        <input type="text" name="bio" id="bio" placeholder="<%=user.information.bio%>" alt="<%=user.information.bio%>" value="<%=user.information.bio%>">
+    </div>
+    <div>
+        <label for="hometown">Hometown</label>
+        <input type="text" name="hometown" id="hometown" placeholder="<%=user.information.homeTown%>" 
+        value="<%=user.information.homeTown%>">
     </div>
    
     <input type="submit" value="Submit Changes">
