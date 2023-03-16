@@ -4,7 +4,7 @@ body{
     padding:0;
     font-family: "Tajawal";
     font-size: 16px;
-    background-image: radial-gradient(#393E41, #03254E);
+    background-image: radial-gradient(#393E41, black);
     background-size: contain;
     background-position: center;
     /* background-repeat: no-repeat; */
@@ -106,12 +106,13 @@ nav{
     height: 2em;
     /* background-color: #03254EF3; */
     /* background-image: linear-gradient(to left#393E41, #03254E); */
-    background-color:rgba(0, 0, 0, 0.673);
+    background-color:black;
     padding:2em;
     position: fixed;
     top:0;
     width: 100%;
-    margin: 0 0 5em 0
+    margin: 0 0 5em 0;
+    z-index:9;
 }
 .nav-left{
 margin: 0 5em;
