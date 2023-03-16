@@ -1,13 +1,30 @@
 const mongoose = require('mongoose');
 
+const commentsSchema = new mongoose.Schema (
+    {
+        comment: {
+            type: String,
+            required: true
+        }, 
+        likes: {},
+        dislikes: {}
+    },
+    {
+        timestamps: true,
+    }
+)
 const postsSchema = new mongoose.Schema (
     {
         text: {
             type: String,
             required: true
         }, 
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Users'
+        },
         img: {},
-        comments: {},
+        comments: [commentsSchema],
         likes: {},
         dislikes: {}
     },
