@@ -53,16 +53,34 @@ router.delete('/delete', async (req, res, next) => {
     }
 })
 
-router.get('/:id/edit', async (req, res, next) => {
+router.get('/edit', async (req, res, next) => {
     try {
-        const profileEdit = await Users.findById(req.session.currentUser.id);
+        const currentUser = await Users.findById(req.session.currentUser.userExists._id);
+        //console.log('session:', req.session.currentUser)
+        context = {
+            user: currentUser
+        }
     
-        console.log(profileEdit);
+       //console.log('context:', currentUser);
+        // console.log(profileEdit.userExists.name);
         res.render('settings/edit.ejs', context)
     } catch(someEdit) {
             console.log(someEdit);
             return next();
         
+    }
+})
+
+router.put('/edit/:id', async(req, res, next) => {
+    try {
+        // console.log(req.params);
+        console.log(req.body);
+        const updateItem = await Users.findByIdAndUpdate(req.params.id, {$set:req.body});
+         console.log(updateItem);
+        res.redirect('/settings/edit');
+    } catch(postComment) {
+        console.log(postComment);
+        return next();
     }
 })
 
