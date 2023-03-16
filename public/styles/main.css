@@ -81,6 +81,33 @@ body{
    
 }
 
+.ejsUser p{
+   text-align: center;
+   margin-top:15px;
+text-transform: capitalize;
+
+}
+
+.follow-DM button{
+background-color: #03254E;
+border:none;
+padding:7px;
+border-radius:0.5em;
+text-align: center;
+margin: 0 5px;
+transition: 0.2s;
+}
+
+.follow-DM button:hover{
+    transform: scale(1.05);
+    background-color: #393E41;
+}
+
+.follow-DM button a{
+    text-decoration: none;
+    color:white;
+}
+
 .registerbox h3{
     text-align: center;
     font-size: 2em;
@@ -175,6 +202,13 @@ nav img{
     z-index: 1;
 
     /* position:fixed; */
+}
+
+.addPost svg{
+    transition: .5s;
+}
+.addPost svg:hover{
+    transform: scale(1.2);
 }
 
 .form-container{
@@ -311,6 +345,22 @@ border-right:1px solid black;
     height: 20em;
       
 }
+.image-animation img, .nav-right svg{
+    transition: 0.3s;
+    z-index:2;
+}
+
+.image-animation img:hover {
+transform: scale(1.01);
+box-shadow: #03254E 1px 1px 2px 5px;
+}
+
+.nav-icon{
+    display:inline;
+}
+.nav-right svg:hover{
+transform: scale(1.2);
+}
 
 .like-dislike{
     display:flex;
@@ -335,7 +385,8 @@ border-right:1px solid black;
 .trash {
     display:flex;
     align-items: center;
-    gap:15%
+    gap:5px;
+    transform: translate(-20px, 0);
 }
 
 .picShow-container{
@@ -349,19 +400,20 @@ border-right:1px solid black;
     }
 .picShow-comments{
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding:3vh;
-    gap:15px;
+    padding:1.5em;
+    gap:-15em;
     background-color: rgba(0, 0, 0, 0.443);
     margin:5%;
-    height:75%;
-    width: 85%
+    height:55%;
+    /* width: 65% */
 }
 
 .picShow img{
-    height:45%;
-   width: 20em;
+    height:85%;
+   
+    width: 20em;
 }
 
 .comments{
@@ -372,8 +424,13 @@ border-right:1px solid black;
     height: 25em;
 }
 
+.caption {
+    text-align: center;
+    text-transform: capitalize;
+}
+
 footer p{
-position:relative;
+/* position:relative; */
 bottom:0;
 text-align: center;
 }
