@@ -1,11 +1,12 @@
 <%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
 
 <div class="feed-container">
-    <h1>This is my personal feed</h1>
+    <h1>Explore</h1>
+    <% for(let i = 0; i < post.length; i++) { %>
+        <div class="border-line">
     <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1678063412571-c09ec5f4a5cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-                    alt="">
-                    <div class="like-dislike">
+                <img  src="<%=post[i].img%>" alt="feed post">
+                <div class="like-dislike">
                     <form method="POST" action="/Dislike">
                         <button class="Dislike" title="Dislike" alt="Dislike Button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -27,8 +28,9 @@
                         </button>
                     </form>
                 </div>
+        </div>
     </div>
-
+    <% } %>
 </div>
 
 
