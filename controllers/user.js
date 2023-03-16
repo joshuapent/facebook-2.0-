@@ -38,8 +38,7 @@ router.get('/posts', async (req, res, next) => {
     try {
         const showPost = await Posts.findOne({Posts})
       console.log(showPost)
-        let context = 
-    { 
+        let context = { 
         post: showPost,
         user: req.session.currentUser.userExists
     }
@@ -49,6 +48,17 @@ router.get('/posts', async (req, res, next) => {
         return next();
     }
 })
+
+router.delete('posts/:_id', async (req, res, next) => {
+    try {
+        const deletePost = await Posts.findByIdAndDelete(req.params.id)
+        res.redirect('/home')
+    } catch (err) {
+        console.log(err)
+        return next();
+    }
+})
+
 
 
 // router.get('/user/:id', async (req, res, next) => {
