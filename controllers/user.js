@@ -5,7 +5,6 @@ const { Posts } = require('../models')
 
 router.get('/*', (req, res, next) => {
     try {
-        console.log(req.session.currentUser)
         if(typeof req.session.currentUser === 'undefined') {
             res.redirect('/')
         } 
@@ -26,7 +25,6 @@ router.get('/', async (req, res, next) => {
             user: req.session.currentUser.userExists,
             post: allPosts
         }
-        console.log(Posts)
         res.render('profilePage/index.ejs', context)
     } catch(err) {
         console.log(err);
@@ -37,7 +35,6 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
     try {
         const showPost = await Posts.findById(req.params.id)
-      console.log(showPost)
         let context = { 
         post: showPost,
         user: req.session.currentUser.userExists

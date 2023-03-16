@@ -1,0 +1,49 @@
+<%-include('../partials/head.ejs', {styleSheet: '/styles/main.css'})%>
+
+
+<div class="profile-container">
+
+    <div class="profile-navbar">
+        
+        <div class="profile-image">
+            <img src="https://toppng.com/uploads/thumbnail/yoda-silhouette-11562913728qpwtuuynq1.png" 
+            title=" <%= user.name %> " 
+            alt="Profile Image of <%= user.name %>">
+        </div>
+        <div class="profile-bio">
+            <%= user.name %>
+            <%= user.information.bio %>
+        </div>
+        <div class="follow-DM">
+            <button alt="Follow User">
+                <a href="">Follow</a>
+            </button>
+            <button alt="Message User">
+                <a href="">Message</a>
+            </button>
+        </div>
+    </div>
+
+        <div class="line"><hr></div>
+    
+    
+    <div class="profile-posts">
+        <div class="post-history">
+    <% if(post == ''){ %>
+                <h3>Start posting today!</h3> 
+              
+    <% }else{ %>
+    <% for(let i = 0; i < post.length; i++){ %>
+                <div class="image-animation">
+                <a href="/home/<%=post[i]._id%>">
+                    <img src="<%=post[i].img%>" alt="">  
+                </a>
+                </div>
+    <% } %>
+<% } %>
+        </div>
+    </div>
+
+</div>
+
+<%-include('../partials/footer.ejs') %>
