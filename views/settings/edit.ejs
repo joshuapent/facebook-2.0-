@@ -5,8 +5,9 @@
     <form method="POST" action="/settings/edit/<%=user._id%>?_method=PUT">
     <div class="Edit-options">
         <label for="name">Edit Name</label>
-        <input type="text" name="name" id="name" placeholder="<%=user.name%>" value=<%=user.name%>>
+        <input type="text" name="name" id="name" placeholder="<%=user.name%>" alt="<%=user.name%>"value=<%=user.name%>>
     </div>
+
    
     <input type="submit" value="Submit Changes">
     </form>
