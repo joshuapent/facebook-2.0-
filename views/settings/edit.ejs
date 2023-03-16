@@ -2,23 +2,12 @@
 
 <div class="Edit-container">
     <h1>Edit Profile</h1>
-    <form method="POST" action="settings/edit/<%=profileEdit._id %>?_method=PUT">
+    <form method="POST" action="/settings/edit/<%=user._id%>?_method=PUT">
     <div class="Edit-options">
         <label for="name">Edit Name</label>
         <input type="text" name="name" id="name" placeholder="<%=user.name%>" value=<%=user.name%>>
     </div>
-    <div>
-        <label for="image">Edit Profile Picture</label>
-        <input type="img" name="information.profilePic" id="information.profilePic" placeholder="<%=user.information.profilePic%>" value=<%=user.information.profilePic%>>
-    </div>
-    <div>
-        <label for="age">Edit Age</label>
-        <input type="number" name="user.information.age" id="user.information.age" placeholder="<%=user.information.age%>" value=<%=user.information.age%>>   
-    </div>
-    <div>
-        <label for="hometown">Hometown</label>
-        <input type="text" name="hometown" id="hometown" value=<%=user.information.age%>>
-    </div>
+   
     <input type="submit" value="Submit Changes">
     </form>
 </div>
