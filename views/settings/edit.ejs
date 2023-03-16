@@ -1,29 +1,26 @@
 <%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
 
 <div class="Edit-container">
-    <h1>Edit Profile</h1>
+    <h1>Edit Profile dude</h1>
     <form method="POST" action="/settings/edit/<%=user._id%>?_method=PUT">
-    <div class="Edit-options">
         <label for="name">Edit Name</label>
-        <input type="text" name="name" id="name" placeholder="<%=user.name%>" alt="<%=user.name%>"value=<%=user.name%>>
-    </div>
-    <div class="Edit-options">
+        <input type="text" name="name" id="name" placeholder="<%=user.name%>" alt="<%=user.name%>"
+        value=<%=user.name%>>
+       
         <label for="image">Update Profile Picture</label>
         <input type="text" name="image" id="image"  
-        alt="<%=user.name%>'s Profile Picture" value="<%=user.information.profilePic%>">
-    </div>
-    <div class="Edit-options">
+        alt="<%= user.name %>'s Profile Picture" value=<%= user.information.profilePic %>>
+
         <label for="bio">Update Bio</label>
-        <input type="text" name="bio" id="bio" placeholder="<%=user.information.bio%>" alt="<%=user.information.bio%>" value="<%=user.information.bio%>">
-    </div>
+        <input type="text" name="bio" id="bio" placeholder="<%= user.information.bio %>" alt="<%= user.information.bio %>" value=<%=user.information.bio %>>
+
     <div class="Edit-options">
         <label for="hometown">Hometown</label>
         <input type="text" name="hometown" id="hometown" placeholder="<%=user.information.homeTown%>" 
-        value="<%=user.information.homeTown%>">
+        value=<%=user.information.homeTown%>>
     </div>
-
    
     <input type="submit" value="Submit Changes">
     </form>
-</div>
+
 <%-include('../partials/footer.ejs') %>
