@@ -34,21 +34,31 @@ router.get('/', async (req, res, next) => {
     }
 })
 
-router.get('/posts', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
     try {
-        const showPost = await Posts.findOne({Posts})
+        const showPost = await Posts.findById(req.params.id)
       console.log(showPost)
-        let context = 
-    { 
+        let context = { 
         post: showPost,
         user: req.session.currentUser.userExists
-    }
-        res.render('profilePage/picShow.ejs', context)
+        }
+    res.render('profilePage/picShow.ejs', context)
     } catch(err) {
         console.log(err);
         return next();
     }
 })
+
+router.delete('/:id', async (req, res, next) => {
+    try {
+        const deletePost = await Posts.findByIdAndDelete(req.params.id)
+        res.redirect('/home')
+    } catch (err) {
+        console.log(err)
+        return next();
+    }
+})
+
 
 
 // router.get('/user/:id', async (req, res, next) => {

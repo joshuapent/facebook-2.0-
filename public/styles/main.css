@@ -4,7 +4,7 @@ body{
     padding:0;
     font-family: "Tajawal";
     font-size: 16px;
-    background-image: radial-gradient(#393E41, #03254E);
+    background-image: radial-gradient(#393E41, black);
     background-size: contain;
     background-position: center;
     /* background-repeat: no-repeat; */
@@ -106,12 +106,13 @@ nav{
     height: 2em;
     /* background-color: #03254EF3; */
     /* background-image: linear-gradient(to left#393E41, #03254E); */
-    background-color:rgba(0, 0, 0, 0.673);
+    background-color:black;
     padding:2em;
     position: fixed;
     top:0;
     width: 100%;
-    margin: 0 0 5em 0
+    margin: 0 0 5em 0;
+    z-index:9;
 }
 .nav-left{
 margin: 0 5em;
@@ -303,10 +304,14 @@ border-right:1px solid black
 
 .like-dislike{
     display:flex;
-    gap:5px;
-    justify-content: flex-end;
+    gap:10px;
+    align-self: center;
     margin:0.5em 0;
     
+}
+.trash-like-dislike{
+    display:flex;
+    gap:13.5vw;
 }
 
 .like-dislike button{
@@ -314,60 +319,45 @@ border-right:1px solid black
     border-radius: 0.5em;
     border:none;
     background-color: rgba(0, 0, 0, 0.457);
-    padding: 0.5em
+    padding: 0.5em;
+}
+.trash {
+    display:flex;
+    align-items: center;
+    gap:10px
 }
 
-.image-show{
+.picShow-container{
+    display:flex;
+    height:55vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4em 4em 3em 4em;
+    background-color: #8D909B;
+    z-index: 1;
+    }
+.picShow-comments{
+    display:flex;
+    justify-content: center;
+    gap:2em;
+    padding:3vh;
+    background-color: rgba(0, 0, 0, 0.443);
+   margin:1.5vh;
+    height:45vh;
+    width: 75vw;
+}
+
+.picShow img{
+    height:15rem;
+    width: 25rem;
+}
+
+.comments{
     display: flex;
-    height: 80vh;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 4em;
-        padding:2em;
-        background-color: #8D909B;
-        z-index: 1;
-       
-}
-
-.container-display{
-    display:flex;
-    width: fit-content;
-    background-color: rgba(0, 0, 0, 0.297);
-   
-
-}
-.comments-container{
-    display:flex;
-    flex-direction: column;
-    border: solid 2px black;
-    /* height:25em;
-    width: 20em; */
-    margin-right:3em;
     align-items: flex-end;
-    justify-content: flex-end;
-    gap:10em;
-    margin:2em;
-  
-   
+    background-color: white;
+    border: #03254E 3px solid;
 }
-
-.post-comments{
-    display: flex;
-    
-    /* transform: translate(10.3em, 21em); */
-}
-
-.only-image{
-    display:flex;
-    padding: 5em;
-}
-
-.only-image img{
-  height:22em;
-}
-
-
 
 
 
