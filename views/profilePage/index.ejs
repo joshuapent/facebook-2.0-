@@ -48,10 +48,11 @@
               
     <% }else{ %>
     <% for(let i = 0; i < post.length; i++){ %>
+                <div class="image-animation">
                 <a href="/home/<%=post[i]._id%>">
                     <img src="<%=post[i].img%>" alt="">  
                 </a>
-                
+                </div>
     <% } %>
 <% } %>
         </div>
