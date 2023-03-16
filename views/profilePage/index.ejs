@@ -48,7 +48,7 @@
               
     <% }else{ %>
     <% for(let i = 0; i < post.length; i++){ %>
-                <a href="/home/posts">
+                <a href="/home/<%=post[i]._id%>">
                     <img src="<%=post[i].img%>" alt="">  
                 </a>
                 
