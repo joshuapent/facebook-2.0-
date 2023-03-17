@@ -4,9 +4,9 @@
 <div class="profile-container">
 
     <div class="profile-navbar">
-        
+        <% console.log(user) %>
         <div class="profile-image">
-            <img src="https://toppng.com/uploads/thumbnail/yoda-silhouette-11562913728qpwtuuynq1.png" 
+            <img src=<%= user.information.profilePic %>
             title=" <%= user.name %> " 
             alt="Profile Image of <%= user.name %>">
         </div>
