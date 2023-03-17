@@ -69,10 +69,7 @@ router.post('/newPost', async (req, res, next) => {
 
 router.put('/:id', async(req, res, next) => {
     try {
-        console.log(req.params.id);
-        console.log(req.body);
         const updateItem = await Post.findByIdAndUpdate(req.params.id, req.body);
-        console.log(updateItem);
         res.redirect('/post');
     } catch(postComment) {
         console.log(postComment);
@@ -82,10 +79,7 @@ router.put('/:id', async(req, res, next) => {
 
 router.delete('/:id', async (req, res, next) => {
     try {
-        console.log(req.params);
-        console.log("Delete route");
         const postGettingDeleted = await Post.findByIdAndDelete(req.params.id);
-        console.log(postGettingDeleted);
         res.redirect('/post');
     } catch(erasePost) {
         console.log(erasePost);
