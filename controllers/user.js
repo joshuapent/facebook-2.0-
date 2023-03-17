@@ -71,8 +71,7 @@ router.post('/newPost', async (req, res, next) => {
     try {
         console.log(req.body);
         const newPost = await Posts.create(req.body);
-        // mySeedData.push(newPost);
-        // console.log(newPost);
+        console.log(newPost)
         res.redirect('/home')
         
     } catch(err) {
@@ -83,7 +82,7 @@ router.post('/newPost', async (req, res, next) => {
 
 
 
-//params.sting ?
+//params.string ?
 router.put('/:id', async(req, res, next) => {
     try {
         console.log(req.params.id);
