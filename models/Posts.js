@@ -25,8 +25,12 @@ const postsSchema = new mongoose.Schema (
         },
         img: {},
         comments: [commentsSchema],
-        likes: {},
-        dislikes: {}
+        likes: {
+            type: Number
+        },
+        dislikes: {
+            type: Number
+        }
     },
     {
         timestamps: true,
