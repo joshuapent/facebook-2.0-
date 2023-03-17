@@ -47,15 +47,19 @@
     <% if(post == ''){ %>
                 <h3>Start posting today!</h3> 
               
-    <% }else if (user._id === post.user) { %>
-    <% for(let i = 0; i < post.length; i++){ %>
+    <% }else { %>
+        <% for(let i = 0; i < post.length; i++){ %>
+            <% if (user._id.toString() === post[i].user.toString()) { %>
                 <div class="image-animation">
                 <a href="/home/<%=post[i]._id%>">
                     <img src="<%=post[i].img%>" alt="">  
                 </a>
                 </div>
+            <% } else { %>
+                <% %> 
+            <% } %>
+        <% } %>
     <% } %>
-<% } %>
         </div>
     </div>
 

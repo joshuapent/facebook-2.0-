@@ -25,6 +25,8 @@ router.get('/visit/:id', async (req, res, next) => {
             user: user,
             post: allPosts
         }
+        console.log(context.user._id)
+        console.log(context.post[0].user)
         res.render('search/otherUser.ejs', context)
     } catch(err) {
         console.log(err);
