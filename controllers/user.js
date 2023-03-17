@@ -17,7 +17,6 @@ router.get('/*', (req, res, next) => {
     }
 })
 
-
 router.get('/', async (req, res, next) => {
     try {
         const allPosts = await Posts.find({})
@@ -56,22 +55,10 @@ router.delete('/:id', async (req, res, next) => {
     }
 })
 
-
-
-// router.get('/user/:id', async (req, res, next) => {
-//     try {
-//         res.render('/user/profile.ejs')
-//     } catch(err) {
-//         console.log(err);
-//         return next();
-//     }
-// })
-
 router.post('/newPost', async (req, res, next) => {
     try {
         console.log(req.body);
         const newPost = await Posts.create(req.body);
-        console.log(newPost)
         res.redirect('/home')
         
     } catch(err) {
@@ -80,9 +67,6 @@ router.post('/newPost', async (req, res, next) => {
     }
 })
 
-
-
-//params.string ?
 router.put('/:id', async(req, res, next) => {
     try {
         console.log(req.params.id);

@@ -9,7 +9,7 @@
                 <img  src="<%=post[i].img%>" alt="feed post">
         </a>
                 <div class="like-dislike">
-                    <form method="POST" action="/Dislike">
+                    <div class="dislike-container">
                         <button class="Dislike" title="Dislike" alt="Dislike Button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="red" class="bi bi-hand-thumbs-down" viewBox="0 0 16 16">
@@ -18,7 +18,12 @@
                             </svg>
                             <!-- Dislike -->
                         </button>
-                    </form>
+                        <span id="dislike-counter">
+                            <%=post.dislikes%>
+                        </span>
+                 
+                    </div>
+                    <div class="like-container">
                     <form action="POST" action="/Like">
                         <button title="Like" alt="Like Button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -28,12 +33,42 @@
                             </svg>
                             <!-- Like -->
                         </button>
+                        <span id="like-counter" style="color: black;">
+                            <%=post.likes%>
+                        </span>
                     </form>
+                    </div>
                 </div>
         </div>
     </div>
     <% } %>
+
+<script>
+    
+            const likeButton = document.getElementById('like-button');
+            const dislikeButton = document.getElementById('dislike-button')
+            let likeCounting = document.getElementById('like-counter')
+            let dislikeCounting = document.getElementById('dislike-counter')
+            likeButton.addEventListener('click', likeCounter)
+            function likeCounter() {
+                let likeCount = likeCounting.innerHTML
+            likeCount++;
+            likeCounting.innerHTML = likeCount
+            console.log(likeCount)
+    }
+            dislikeButton.addEventListener('click', dislikeCounter)
+            function dislikeCounter(){
+                let dislikeCount = dislikeCounting.innerHTML
+            dislikeCount++;
+            dislikeCounting.innerHTML = dislikeCount
+    }
+
+    
+</script>
+
 </div>
+
+
 
 
     <%-include('../partials/footer.ejs') %>
