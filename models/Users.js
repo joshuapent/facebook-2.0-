@@ -24,7 +24,10 @@ const usersSchema = new mongoose.Schema (
             ref: 'Users'
         },
         information: {
-            bio: {default: 'New JEV Media User'},
+            bio: {
+                type: String,
+                default: 'New JEV Media User'
+            },
             profilePic: {
                 type: String,
                 default: 'https://toppng.com/uploads/thumbnail/yoda-silhouette-11562913728qpwtuuynq1.png'
