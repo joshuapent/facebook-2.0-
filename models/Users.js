@@ -19,10 +19,15 @@ const usersSchema = new mongoose.Schema (
             type: String,
             required: true,
         },
+        friends: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Users'
+        },
         information: {
-            bio: {},
+            bio: {default: 'New JEV Media User'},
             profilePic: {
                 type: String,
+                default: 'https://toppng.com/uploads/thumbnail/yoda-silhouette-11562913728qpwtuuynq1.png'
             },
             age: {},
             homeTown: {}
