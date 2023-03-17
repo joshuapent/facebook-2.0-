@@ -47,7 +47,7 @@
     <% if(post == ''){ %>
                 <h3>Start posting today!</h3> 
               
-    <% }else{ %>
+    <% }else if (user._id === post.user) { %>
     <% for(let i = 0; i < post.length; i++){ %>
                 <div class="image-animation">
                 <a href="/home/<%=post[i]._id%>">
