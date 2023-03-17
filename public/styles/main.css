@@ -7,10 +7,7 @@ body{
     background-image: radial-gradient(#393E41, black);
     background-size: contain;
     background-position: center;
-    /* background-repeat: no-repeat; */
-     background-color:#03254E;
-    /* #8D909B grey, for outer margin, #03254E darkblue*/
-    
+    background-color:#03254E;
     z-index: 0;
     color:white;
     height:100%;
@@ -21,18 +18,14 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-evenly;
-   gap:10em;
+    gap:10em;
 }
-
-
-
 
 .center{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     height: 90vh;
- 
 }
 
 .right{
@@ -40,7 +33,7 @@ body{
     flex-direction: column;
     border: solid black 3px;
     padding:5em;
-   background-image: radial-gradient(#8D909B, darkgray);
+    background-image: radial-gradient(#8D909B, darkgray);
     border-radius: 0.5em;
     justify-content: space-evenly;
     gap:5px;
@@ -68,34 +61,30 @@ body{
     padding:1em
 }
 
-
 #email, #password, #confirmPassword, #name, #DOB{
-   display:block;
+    display:block;
     width: 15em;
     height: 1.5em;
     border: solid black 2px;
     font-size: 15px;
     padding:0.5em;
     margin:10px;
-    
-   
 }
 
 .ejsUser p{
-   text-align: center;
-   margin-top:15px;
-text-transform: capitalize;
-
+    text-align: center;
+    margin-top:15px;
+    text-transform: capitalize;
 }
 
 .follow-DM button{
-background-color: #03254E;
-border:none;
-padding:7px;
-border-radius:0.5em;
-text-align: center;
-margin: 0 5px;
-transition: 0.2s;
+    background-color: #03254E;
+    border:none;
+    padding:7px;
+    border-radius:0.5em;
+    text-align: center;
+    margin: 0 5px;
+    transition: 0.2s;
 }
 
 .follow-DM button:hover{
@@ -111,21 +100,19 @@ transition: 0.2s;
 .registerbox h3{
     text-align: center;
     font-size: 2em;
-
 }
 
 .register-input{
-   display:flex;
-   justify-content: center;
+    display:flex;
+    justify-content: center;
 }
 
-
 .login #email, .login #password{
- translate: 0 -50px;
+    translate: 0 -50px;
 }
 .inline{
     display:flex;
-   justify-content: space-around;
+    justify-content: space-around;
 }
 
 nav{
@@ -133,8 +120,6 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 2em;
-    /* background-color: #03254EF3; */
-    /* background-image: linear-gradient(to left#393E41, #03254E); */
     background-color:black;
     padding:2em;
     position: fixed;
@@ -143,9 +128,11 @@ nav{
     margin: 0 0 5em 0;
     z-index:9;
 }
+
 .nav-left{
-margin: 0 5em;
+    margin: 0 5em;
 }
+
 .nav-right{
     margin: 0 4em;
 }
@@ -161,17 +148,15 @@ margin: 0 5em;
     text-decoration: underline;
 }
 
-
-
 nav img{
     height:4em;
 }
 
  .search-container{
     margin: 1.7em 4em 0.2em 4em;
-        background-color: #8D909B;
-        z-index: 1;
-        height: 80vh;
+    background-color: #8D909B;
+    z-index: 1;
+    height: 80vh;
  }
 
  .search-results{
@@ -183,30 +168,23 @@ nav img{
     align-items: center;
  }
 
- .search-results a{
+.search-results a{
     text-decoration: none;
     color:black;
     transition: 0.2s;
- }
+}
 
- 
-
- .search-results a:hover{
+.search-results a:hover{
     text-decoration: underline;
     transform: scale(1.02);
- }
+}
 
 
 .profile-container{
-    /* display:flex;
-    flex-direction: column;
-    justify-content: center; */
     margin: 5em 4em 0.2em 4em;
     background-color: #8D909B;
     z-index: 1;
     height:90%;
-  
-   
 }
 
 .profile-navbar{
@@ -224,20 +202,18 @@ nav img{
     top: calc(50% - 200px);
     left: calc(50% - 250px); 
     z-index: 9;
-   
 }
 
 .addPost{
     background: none;
     border:none;
     z-index: 1;
-
-    /* position:fixed; */
 }
 
 .addPost svg{
     transition: .3s;
 }
+
 .addPost svg:hover{
     transform: scale(1.3);
 }
@@ -246,20 +222,16 @@ nav img{
     display: flex;
     position:relative;
     flex-direction: column;
-    /* /* align-items: center; */
     justify-content: center;
     gap:5px;
-   /* text-align: center; */
-   font-size: 1.5em;
+    font-size: 1.5em;
     background-color: rgba(0, 0, 0, 0.583);
     padding:1.5em;
-    /* margin:1em; */
     border: #03254E solid 5px;
     border-radius: 1em;
     height: 20em;
     width: 20em;
     transition: 1s;
-    
 }
 
 .form-container::before{
@@ -274,13 +246,12 @@ nav img{
 .form-container input{
     cursor: pointer;
     text-align: center;
-    
 }
 
 .form-container #img{
- background-color: white;
- cursor:pointer;
- color: black;
+    background-color: white;
+    cursor:pointer;
+    color: black;
 }
 
 .profile-bio {
@@ -289,7 +260,7 @@ nav img{
 }
 
 .line{
-display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -315,8 +286,7 @@ display: flex;
 .post-history{
     display: flex;
     flex-wrap: wrap;
-        justify-content: center;
-        /* align-items: center; */
+    justify-content: center;
 }
 
 .post-history img {
@@ -333,9 +303,6 @@ height:17em;
 width: 12em;
 margin:20px;
 border-right:1px solid black;
-
-/* background-color: black; */
-
 }
 
 .settings-options a, .settings-options input{
@@ -347,8 +314,8 @@ border-right:1px solid black;
     border:none;
     background: none;
     cursor: pointer;
-
 }
+
 .input-edit{
     display:flex;
     flex-direction: column;
@@ -356,16 +323,16 @@ border-right:1px solid black;
 
 .input-edit input {
     display: block;
-        width: 15em;
-        height: 1.5em;
-        border: solid black 2px;
-        font-size: 15px;
-        padding: 0.5em;
-        margin: 10px;
+    width: 15em;
+    height: 1.5em;
+    border: solid black 2px;
+    font-size: 15px;
+    padding: 0.5em;
+    margin: 10px;
 }
+
 #submit{
-    margin-top:1em;
-    
+    margin-top:1em;  
 }
 
  #submit a{
@@ -380,7 +347,7 @@ border-right:1px solid black;
 }
 
 .Edit-options{
-display: flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -388,7 +355,6 @@ display: flex;
     width: 25em;
     margin: 20px;
     padding:1.5em;
-   
     border-right: 1px solid black;
 }
 
@@ -396,17 +362,15 @@ display: flex;
     margin:2em;
 }
 
-
 .settings-options a:hover ,.settings-options input:hover{
     text-decoration: underline;
 }
 
 .settings-container, .Edit-container{
-    /* height:25em; */
     margin: 4em 4em 1em 4em;
-        background-color: #8D909B;
-        z-index: 1;
-        height: 85vh;
+    background-color: #8D909B;
+    z-index: 1;
+    height: 85vh;
 }
 
 .settings-container h1, .Edit-container h1, .feed-container h1{
@@ -422,42 +386,39 @@ display: flex;
     margin: 4em 4em 3em 4em;
     background-color: #8D909B;
     z-index: 1;
-    
 }
 
 .border-line{
     padding: 0 5em;
-  
 }
 
 .image-container{
     margin:2em;
     background-color: white;
     padding:10px;
-
 }
 
 .image-container img{
     max-height: 30em;
-    max-width: 30em;
-      
+    max-width: 30em;  
 }
+
 .image-animation img, .nav-right svg, .image-container{
     transition: 0.1s;
     z-index:2;
 }
 
-
 .image-animation img:hover, .image-container:hover{
-transform: scale(1.01);
-box-shadow: #03254E 1px 1px 2px 5px;
+    transform: scale(1.01);
+    box-shadow: #03254E 1px 1px 2px 5px;
 }
 
 .nav-icon{
     display:inline;
 }
+
 .nav-right svg:hover{
-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .like-dislike{
@@ -466,22 +427,19 @@ transform: scale(1.2);
     align-self: center;
     margin:0.5em 0;
     text-align: center;
-  
-    
 }
 
 .dislike-container, .like-container{
     display:flex;
     align-items: center;
-    
 }
+
 .trash-like-dislike{
     display:flex;
     gap:13.5vw;
 }
 
 .like-dislike button{
-    /* background: none;*/
     border-radius: 0.5em;
     border:none;
     background:none;
@@ -496,6 +454,7 @@ transform: scale(1.2);
 .like-dislike button svg:hover{
     transform: scale(1.3);
 }
+
 .trash {
     display:flex;
     align-items: center;
@@ -511,17 +470,15 @@ transform: scale(1.2);
     transform: scale(1.3);
 }
 
-
-
 .picShow-container{
     display:flex;
-    /* height:55vh; */
     justify-content: space-evenly;
     align-items: center;
     margin: 4em 4em 3em 4em;
     background-color: #8D909B;
     z-index: 1;
-    }
+}
+
 .picShow-comments{
     display:flex;
     justify-content: space-evenly;
@@ -531,11 +488,9 @@ transform: scale(1.2);
     background-color: rgba(0, 0, 0, 0.443);
     margin:5%;
     height:55%;
-    /* width: 65% */
 }
 
 .picShow img{
-    /* max-height:25em; */
     max-width: 25em;
 }
 
@@ -553,11 +508,9 @@ transform: scale(1.2);
 }
 
 footer p{
-/* position:relative; */
-bottom:0;
-text-align: center;
+    bottom:0;
+    text-align: center;
 }
-
 
 footer{
     display:flex;
@@ -567,7 +520,6 @@ footer{
     font-weight: 700;
     font-size:0.8em;
     color:rgba(254, 254, 254, 0.803);
-    /* background-color: #8D909B; */
 }
 
  .login #submit{
@@ -583,7 +535,6 @@ footer{
     background-color: rgb(228, 226, 225);
     font-family: "Tajawal";
     font-size: 1em;
-    /* text-decoration: underline; */
     border:none;
     text-decoration: none;
     text-align: center;
@@ -591,23 +542,20 @@ footer{
     gap: 5px;
     border-radius: 0.5em;
     cursor: pointer;
-    
 }
-
-
-
 
 .login-links:hover, #submit:hover{
     color:white;
     background-color: #03254E;
 }
+
 .login-line{
     border: solid black 1px;
     width: 20em;
     margin:1px;
     translate: 0 -40px;
-
 }
+
 .login-links{
     text-decoration: none;
     color: #03254E;
@@ -615,10 +563,9 @@ footer{
 }
 
 .login-links:hover{
- color:white
+    color:white
 }
 
-/* nav icons */
 svg {
     background-color:none;
     height: 35px ;
@@ -634,8 +581,6 @@ svg {
 
 .DeletePage {
     display:inline;
-    
-
 }
 
 .DeleteOption{
@@ -643,6 +588,6 @@ svg {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-        text-align: center;
-        transform: translate(0, -18em);
+    text-align: center;
+    transform: translate(0, -18em);
 }
