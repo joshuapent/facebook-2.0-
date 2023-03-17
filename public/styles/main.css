@@ -462,9 +462,17 @@ transform: scale(1.2);
 
 .like-dislike{
     display:flex;
-    gap:10px;
+    gap:25px;
     align-self: center;
     margin:0.5em 0;
+    text-align: center;
+  
+    
+}
+
+.dislike-container, .like-container{
+    display:flex;
+    align-items: center;
     
 }
 .trash-like-dislike{
