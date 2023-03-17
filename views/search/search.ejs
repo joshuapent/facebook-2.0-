@@ -1,12 +1,15 @@
 <%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
 
 <h1>Search Result:</h1>
-
+<div class="search-container">
 <% for(let i = 0; i < user.length; i++) { %>
+    <div class="search-results">
     <h2><a href="/visit/<%= user[i]._id%>"><%= user[i].name %></a></h2>
-    <img src="<%= user[i].information.profilePic %>" alt="This image is of: <%= user[i].name %>" class="classImg">
+    <img src="https://toppng.com/uploads/thumbnail/yoda-silhouette-11562913728qpwtuuynq1.png" alt="">
+    <!-- <img src="<%= user[i].information.profilePic %>" alt="This image is of: <%= user[i].name %>" class="classImg"> -->
     <br>
+    </div>
 <% } %>
-
+</div>
 
 <%-include('../partials/footer.ejs') %>

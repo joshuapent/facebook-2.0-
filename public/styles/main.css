@@ -167,6 +167,36 @@ nav img{
     height:4em;
 }
 
+ .search-container{
+    margin: 1.7em 4em 0.2em 4em;
+        background-color: #8D909B;
+        z-index: 1;
+        height: 80vh;
+ }
+
+ .search-results{
+    padding:2em;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap:1.5em;
+    align-items: center;
+ }
+
+ .search-results a{
+    text-decoration: none;
+    color:black;
+    transition: 0.2s;
+ }
+
+ 
+
+ .search-results a:hover{
+    text-decoration: underline;
+    transform: scale(1.02);
+ }
+
+
 .profile-container{
     /* display:flex;
     flex-direction: column;
@@ -221,7 +251,7 @@ nav img{
     gap:5px;
    /* text-align: center; */
    font-size: 1.5em;
-    background-color: rgba(0, 0, 0, 0.822);
+    background-color: rgba(0, 0, 0, 0.583);
     padding:1.5em;
     /* margin:1em; */
     border: #03254E solid 5px;
@@ -254,7 +284,8 @@ nav img{
 }
 
 .profile-bio {
-    color:greenyellow;
+    color:black;
+    font-size: 1.5em;
 }
 
 .line{
@@ -268,7 +299,7 @@ display: flex;
     border: 0.5px solid rgb(255, 255, 255);
 }
 
-.profile-image img{
+.profile-image img, .search-results img{
     height:5em;
     border-radius: 3em;
     border: solid black 1px;
@@ -318,13 +349,43 @@ border-right:1px solid black;
     cursor: pointer;
 
 }
+.input-edit{
+    display:flex;
+    flex-direction: column;
+}
+
+.input-edit input {
+    display: block;
+        width: 15em;
+        height: 1.5em;
+        border: solid black 2px;
+        font-size: 15px;
+        padding: 0.5em;
+        margin: 10px;
+}
+#submit{
+    margin-top:1em;
+    
+}
+
+ #submit a{
+    text-decoration: none;
+    color: black;
+    width: 5em;
+}
+
+.edit-buttons{
+    display:flex;
+    justify-content: space-between;
+}
 
 .Edit-options{
 display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-evenly;
     height:25em;
-    width: 20em;
+    width: 25em;
     margin: 20px;
     padding:1.5em;
    
@@ -341,7 +402,7 @@ display: flex;
 }
 
 .settings-container, .Edit-container{
-    height:25em;
+    /* height:25em; */
     margin: 4em 4em 1em 4em;
         background-color: #8D909B;
         z-index: 1;
@@ -366,8 +427,7 @@ display: flex;
 
 .border-line{
     padding: 0 5em;
-    border-left:1px solid black ;
-    border-right:1px solid black ;
+  
 }
 
 .image-container{
