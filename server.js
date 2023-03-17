@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override')
-
 const session = require('express-session');
 const MongoStore = require("connect-mongo");
 require('dotenv').config();
@@ -11,6 +10,7 @@ const userController = require('./controllers/user.js')
 const feedController = require('./controllers/feed.js')
 const settingsController = require('./controllers/settings.js')
 const searchController = require('./controllers/search.js')
+
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -30,7 +30,6 @@ app.use(
         },
     })
 );
-
 
 app.use('/', loginController);
 

@@ -2,7 +2,6 @@
 
 
 <div class="profile-container">
-
     <div class="profile-navbar">
         <% console.log(user) %>
         <div class="profile-image">
@@ -13,17 +12,15 @@
         <div class="profile-bio">
             <%= user.name %>
         </div>
-        
         <button class="addPost" onclick="openForm()"><svg
                 xmlns="http://www.w3.org/2000/svg" width="35" height="35"
                 fill="black" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                 <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
-            </svg></button>
+                </svg></button>
         <div class="newPost" id="addForm">
             <form method="POST" action="/home/newPost" class="form-container">
                 <input type="text" name="text" id="text" placeholder="Description">
-                <!-- <input type="file" name="img" id="img" accept="image/*"> -->
                 <input type="text" name="img" id="img" placeholder="URL Image">
                 <input type="hidden" name="user" value="<%=user._id%>">
                 <input type="submit" value="Post">
@@ -31,31 +28,24 @@
             </form>
         </div>
     </div>
-
-        <div class="line"><hr></div>
-    
-    
+    <div class="line"><hr></div>
     <div class="profile-posts">
         <div class="post-history">
-    <% if(post == ''){ %>
-                <h3>Start posting today!</h3> 
-              
-    <% }else { %>
-        <% for(let i = 0; i < post.length; i++){ %>
-            <% if (user._id.toString() === post[i].user.toString()) { %>
-                <div class="image-animation">
-                <a href="/home/<%=post[i]._id%>">
-                    <img src="<%=post[i].img%>" alt="">  
-                </a>
-                </div>
-            <% } else { %>
-                <% %> 
+            <% if(post == ''){ %>
+                <h3>Start posting today!</h3>          
+            <% }else { %>
+                <% for(let i = 0; i < post.length; i++){ %>
+                    <% if (user._id.toString() === post[i].user.toString()) { %>
+                        <div class="image-animation">
+                        <a href="/home/<%=post[i]._id%>">
+                            <img src="<%=post[i].img%>" alt="">  
+                        </a>
+                        </div>
+                    <% } %>
+                <% } %>
             <% } %>
-        <% } %>
-    <% } %>
         </div>
     </div>
-
 </div>
 
 <script>
@@ -66,8 +56,6 @@
    function closeForm(){
     document.getElementById('addForm').style.display = "none";
    }
-
-
 </script>
 
 <%-include('../partials/footer.ejs') %>
