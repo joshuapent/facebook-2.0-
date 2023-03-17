@@ -29,18 +29,19 @@
     
     <div class="profile-posts">
         <div class="post-history">
-    <% if(post == ''){ %>
-                <h3>Start posting today!</h3> 
-              
-    <% }else{ %>
-    <% for(let i = 0; i < post.length; i++){ %>
+    <% for(let i = 0; i < post.length; i++) { %>
+        <% if (post.length === 0) { %>
+            <h3>This person hasn't posted yet!</h3> 
+        <% } else if (user._id.toString() == post[i].user.toString()) { %>
                 <div class="image-animation">
                 <a href="/home/<%=post[i]._id%>">
                     <img src="<%=post[i].img%>" alt="">  
                 </a>
                 </div>
+        <% } else { %>
+            <% console.log('else', user._id, post[i].user) %>
+        <% } %>
     <% } %>
-<% } %>
         </div>
     </div>
 
