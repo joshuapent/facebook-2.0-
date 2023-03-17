@@ -21,7 +21,9 @@ const usersSchema = new mongoose.Schema (
         },
         information: {
             bio: {},
-            profilePic: {},
+            profilePic: {
+                type: String,
+            },
             age: {},
             homeTown: {}
         },

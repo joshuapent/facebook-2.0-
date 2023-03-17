@@ -2,25 +2,35 @@
 
 <div class="Edit-container">
     <h1>Edit Profile dude</h1>
+    <div class="Edit-options">
     <form method="POST" action="/settings/edit/<%=user._id%>?_method=PUT">
+        <div class="input-edit">
         <label for="name">Edit Name</label>
         <input type="text" name="name" id="name" placeholder="<%=user.name%>" alt="<%=user.name%>"
         value=<%=user.name%>>
-       
+        </div>
+        <div class="input-edit">
         <label for="image">Update Profile Picture</label>
         <input type="text" name="image" id="image"  
         alt="<%= user.name %>'s Profile Picture" value=<%= user.information.profilePic %>>
-
+        </div>
+        <div class="input-edit">
         <label for="bio">Update Bio</label>
         <input type="text" name="bio" id="bio" placeholder="<%= user.information.bio %>" alt="<%= user.information.bio %>" value=<%=user.information.bio %>>
-
-    <div class="Edit-options">
+        </div>
+        <div class="input-edit">
         <label for="hometown">Hometown</label>
         <input type="text" name="hometown" id="hometown" placeholder="<%=user.information.homeTown%>" 
         value=<%=user.information.homeTown%>>
-    </div>
-   
-    <input type="submit" value="Submit Changes">
+        </div>
+        <div class="edit-buttons">
+    <input type="submit" value="Submit Changes" id="submit">
+            <div class="hoverchange">
+            
+                <a href="/settings" id="submit">Go Back</a>
+            
+            </div>
+            </div>
     </form>
-
+    </div>
 <%-include('../partials/footer.ejs') %>
