@@ -19,9 +19,18 @@ const usersSchema = new mongoose.Schema (
             type: String,
             required: true,
         },
+        friends: {
+            type: Array
+        },
         information: {
-            bio: {},
-            profilePic: {},
+            bio: {
+                type: String,
+                default: 'New JEV Media User'
+            },
+            profilePic: {
+                type: String,
+                default: 'https://toppng.com/uploads/thumbnail/yoda-silhouette-11562913728qpwtuuynq1.png'
+            },
             age: {},
             homeTown: {}
         },

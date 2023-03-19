@@ -32,4 +32,18 @@ router.get('/visit/:id', async (req, res, next) => {
     }
 })
 
+router.get('/visit/post/:id', async (req, res, next) => {
+    try {
+        const showPost = await Posts.findById(req.params.id)
+        let context = { 
+        post: showPost,
+        user: req.session.currentUser.userExists
+        }
+    res.render('search/userPicShow.ejs', context)
+    } catch(err) {
+        console.log(err);
+        return next();
+    }
+})
+
 module.exports = router;

@@ -1,12 +1,19 @@
 <%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
+    <div class="search-background">
+        <h1>Search Result:</h1>
+        <div class="search-container">
+            <% for(let i=0; i < user.length; i++) { %>
+                <div class="search-results">
+                    <h2><a href="/visit/<%= user[i]._id%>">
+                            <%= user[i].name %>
+                        </a></h2>
+                    <img src="<%= user[i].information.profilePic %>"
+                        alt="This image is of: <%= user[i].name %>"
+                        class="classImg">
+                    <br>
+                </div>
+                <% } %>
+        </div>
+    </div>
 
-<h1>Search Result:</h1>
-
-<% for(let i = 0; i < user.length; i++) { %>
-    <h2><a href="/visit/<%= user[i]._id%>"><%= user[i].name %></a></h2>
-    <img src="<%= user[i].information.profilePic %>" alt="This image is of: <%= user[i].name %>" class="classImg">
-    <br>
-<% } %>
-
-
-<%-include('../partials/footer.ejs') %>
+    <%-include('../partials/footer.ejs') %>
