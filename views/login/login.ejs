@@ -1,36 +1,44 @@
 <%- include('./loginPartials/header.ejs') %>
 
-<div class="center">
-    <div class="login-container">
-        <div class="left">
-            <img src='https://i.imgur.com/hR6MKrO.png' alt="Jev Logo">
-        </div>
-        <div class="right">
-            <form method="POST" action="/loginRoute" class="login">
-                <div class="email">
-                <input type="text" name="email" id="email" placeholder="E-mail">
-                </div>
-                <div class="password">
-                    <input type="password" name="password" id="password" placeholder="Password">
-                </div>
-                    <input type="submit" name="submit" id="submit" value="Login" class="login-links">
-            </form>
-            <hr class="login-line">
-            <div class="inline">
-                <div class="forgot">
-                    <a class="login-links" href="/forgotpassword">Forgot password?</a>
-                </div>
-                <div class="register">
-                    <a class="login-links" href="/register">Sign Up</a>
+    <div class="center">
+        <div class="login-container">
+            <div class="left">
+                <img src='https://i.imgur.com/hR6MKrO.png' alt="Jev Logo">
+            </div>
+            <div class="right">
+                <form method="POST" action="/loginRoute" class="login">
+                    <div class="email">
+                        <input type="text" name="email" id="email"
+                            placeholder="E-mail">
+                    </div>
+                    <div class="password">
+                        <input type="password" name="password"
+                            id="password" placeholder="Password">
+                    </div>
+                    <input type="submit" name="submit" id="submit"
+                        value="Login" class="login-links">
+                </form>
+                <hr class="login-line">
+                <div class="inline">
+                    <div class="forgot">
+                        <a class="login-links"
+                            href="/forgotpassword">Forgot password?</a>
+                    </div>
+                    <div class="register">
+                        <a class="login-links" href="/register">Sign Up</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<%-include('../partials/footer.ejs') %>
+    <footer>
+        <div class="line">
+            <hr>
+        </div>
+        <p> @JevMedia || Founded by Joshua Pent, Leonardo Rodriguez, David
+            Velasquez </p>
+    </footer>
+    </body>
 
-
-
-
-
+    </html>

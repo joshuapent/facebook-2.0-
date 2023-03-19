@@ -1,12 +1,15 @@
 <%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
-
-<div class="settings-container">
-    <h1>Settings</h1>
-    <div class="settings-options">
-        <a href="/settings/edit" title="Edit Profile" alt="Edit Profile">Edit Profile</a>
-        <a href="/logout" title="Logout" alt="Logout">Logout</a>
-        <a href="/settings/DeleteMyAccount" title="Delete Account" alt="Delete Account">Delete Account</a>
+    <div class="settings-background">
+        <div class="settings-container">
+            <h1>Settings</h1>
+            <div class="settings-options">
+                <a href="/settings/edit" title="Edit Profile"
+                    alt="Edit Profile">Edit Profile</a>
+                <a href="/logout" title="Logout" alt="Logout">Logout</a>
+                <a href="/settings/DeleteMyAccount" title="Delete Account"
+                    alt="Delete Account">Delete Account</a>
+            </div>
+        </div>
     </div>
-</div>
 
-<%-include('../partials/footer.ejs') %>
+    <%-include('../partials/footer.ejs') %>
