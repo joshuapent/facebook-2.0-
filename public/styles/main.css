@@ -448,13 +448,18 @@ nav img {
     margin: 2em;
     background-color: white;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30em;
+    width: 30em;
 }
 
 .image-container img {
+    min-width: 20em;
     min-height: 20em;
     max-height: 25em;
-    min-width: 20em;
-    max-height: 25em;
+    max-width: 25em;
     margin: 2em;
 }
 
