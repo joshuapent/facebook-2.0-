@@ -5,9 +5,9 @@ const { Posts } = require('../models')
 
 router.get('/*', (req, res, next) => {
     try {
-        if(typeof req.session.currentUser === 'undefined') {
+        if (typeof req.session.currentUser === 'undefined') {
             res.redirect('/')
-        } 
+        }
         else {
             next();
         }
@@ -19,13 +19,13 @@ router.get('/*', (req, res, next) => {
 
 router.get('/', async (req, res, next) => {
     try {
-         const showPost = await Posts.find({})
+        const showPost = await Posts.find({})
         let context = {
             user: req.session.currentUser.userExists,
-            post:showPost
+            post: showPost
         }
         res.render('profilePage/feed.ejs', context)
-    } catch(err) {
+    } catch (err) {
         console.log(err);
         return next();
     }

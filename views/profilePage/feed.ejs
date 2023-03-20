@@ -1,5 +1,6 @@
 <%-include('../partials/head.ejs', {styleSheet: '/styles/main.css' })%>
     <div class="feed-background">
+
         <div class="feed-container">
             <h1>Explore</h1>
             <% for(let i=0; i < post.length; i++) { %>
@@ -8,7 +9,7 @@
                         <a href="/visit/post/<%=post[i]._id%>">
                             <img src="<%=post[i].img%>" alt="feed post">
                         </a>
-                        <div class="like-dislike">
+                        <!-- <div class="like-dislike">
                             <div class="dislike-container">
                                 <button class="Dislike" title="Dislike"
                                     alt="Dislike Button">
@@ -23,7 +24,7 @@
                                 <span id="dislike-counter">
                                     <%=post.dislikes%>
                                 </span>
-                            </div>
+                            </div> 
                             <div class="like-container">
                                 <form action="POST" action="/Like">
                                     <button title="Like" alt="Like Button">
@@ -42,7 +43,7 @@
                                     </span>
                                 </form>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <% } %>
