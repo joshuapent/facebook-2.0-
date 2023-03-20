@@ -8,7 +8,7 @@ body {
     background-image: radial-gradient(#393E41, black);
     background-size: contain;
     background-position: center;
-    /* background-color: black; */
+
     z-index: 0;
     color: white;
     height: 100%;
@@ -568,9 +568,9 @@ nav img {
 }
 
 .picShow img {
-    min-width:20em;
+    min-width: 20em;
     max-width: 30em;
-    min-height:20em;
+    min-height: 20em;
     max-height: 30em;
 }
 
@@ -586,6 +586,7 @@ nav img {
 .caption {
     text-align: center;
     text-transform: capitalize;
+    color: black
 }
 
 footer p {
@@ -649,10 +650,11 @@ footer {
     border-radius: 0.2em;
     cursor: pointer;
     transition: 0.3s;
-    margin:0.2em
+    margin: 0.2em
 }
 
-#search-button:hover, #comment-button:hover {
+#search-button:hover,
+#comment-button:hover {
     transform: scale(1.05);
 }
 

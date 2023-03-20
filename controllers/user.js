@@ -57,7 +57,6 @@ router.delete('/:id', async (req, res, next) => {
 
 router.post('/newPost', async (req, res, next) => {
     try {
-        console.log(req.body);
         const newPost = await Posts.create(req.body);
         res.redirect('/home')
         
