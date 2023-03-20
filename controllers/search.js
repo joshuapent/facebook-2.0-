@@ -18,7 +18,6 @@ router.get(`/search`, async (req, res, next) => {
 
 router.get('/visit/:id', async (req, res, next) => {
     try {
-        console.log(req.params)
         const user = await Users.findById(req.params.id)
         const allPosts = await Posts.find({})
         context = {
